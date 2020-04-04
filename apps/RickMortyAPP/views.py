@@ -5,6 +5,7 @@ from django.shortcuts import render
 import json
 import requests
 
+
 # Create your views here.
 def index(request):
     url = 'https://rickandmortyapi.com/api/episode/'
