@@ -1,0 +1,47 @@
+{% extends 'base/base.html' %}
+{% block content %}
+<div class="container2">
+    <div style="flex-direction: row; display: flex; padding-top: 15px;">
+        <img src="{{image}}" style="border-radius: 50%; max-height: 300px; max-width: 300px; padding-left: 25px; padding-top: 25px;">
+        <div style="padding-left: 50px; padding-top: 25px;">
+            <h1> {{name}} </h1>
+            <div style="flex-direction: row; display: flex;"> 
+                {% if origin_name == 'unknown' %}
+                <h1>Unknown origin place</h1>
+                {% else %}
+                <h2>Origin place:</h2>
+                <h2 style="padding-left: 25px;"><a href="{% url 'rickmortyapp:location' id=origin_id %}">{{origin_name}}</a></h2>
+                {% endif %}
+            </div>
+            <div style="flex-direction: row; display: flex;"> 
+                {% if location_name == 'unknown' %}
+                <h1>unknown actual location</h1>
+                {% else %}
+                <h2>Actual location:</h2>
+                <h2 style="padding-left: 25px;"><a href="{% url 'rickmortyapp:location' id=location_id %}">{{location_name}}</a></h2>
+                {% endif %}
+            </div>
+            <div style="flex-direction: row; display: flex;">
+                <h3>Status: {{status}} </h3>
+                <div style="flex-direction: column; display: flex; padding-left: 25px;">
+                    <h3>Species: {{species}} </h3>
+                    {% if type != '' %}
+                    <h3>Type: {{type}} </h3>
+                    {% endif %}
+                </div>
+                <h4 style="padding-left: 25px;">Gender: {{gender}}</h4>
+            </div>
+        </div>
+    </div>
+    <div style="display: flex; flex-direction: column; padding-top: 25px; padding-left: 100px;">
+        <div>
+            <h2>Episodes of appearence:</h2>
+        </div>
+        <div style="padding-left: 100px;">
+            {% for i, j in episode_info %}
+            <h3 id="title"><a href="{% url 'rickmortyapp:episode' id=j %}">{{i}}</a></h3>
+            {% endfor %}
+        </div>
+    </div>
+</div>
+{% endblock %}

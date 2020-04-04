@@ -1,0 +1,32 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang= "es">
+<head>
+    <meta charset="utf-8">
+    {% block static %}
+    {% endblock %}
+    <link rel="stylesheet" href="{% static 'css/bootstrap.min.css' %}">
+</head>
+{% block navbar %}
+<div class="Navbar">
+    <a href="{% url 'rickmortyapp:index' %}">
+        <img src='../../static/images/toppng.com-rick-and-morty-portal-282x379.png' style="width: 30px; height: 30px;" href="{% url 'rickmortyapp:index' %}">
+    </a>
+    <form action="{% url 'rickmortyapp:searchs' %}">
+        <input type="text" placeholder="Wuba luba dub dub" name="nombre">
+        <button type="submit" class="search_btn" >GO</button>
+    </form>
+</div>
+{% endblock %}
+
+<body class="BaseContainer">
+<div>
+
+    {% block content %}
+    {% endblock %}
+    
+    {% block footer %}
+    {% endblock %}
+</div>
+</body>
+</html>

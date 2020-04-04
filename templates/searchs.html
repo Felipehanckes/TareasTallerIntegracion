@@ -1,0 +1,53 @@
+{% extends 'base/base.html' %}
+{%block content %}
+<div style="flex-direction: row; display: flex;">
+    <a href="{% url 'rickmortyapp:index' %}" style="padding-left: 30%; padding-top: 45px;">
+        <img  src='../static/images/R&M_no_background.png'>
+    </a>
+</div>
+<div class='container'>
+
+    {% if results_character != None %}
+    <h1 id='title'>Character search results</h1>
+    {% for character in results_character %}
+    <div class="listing">
+        <div style="display: flex; flex-direction: row; align-items: center;">
+            <img src="{{character.image}}" style="border-radius: 50%; max-width: 100px; max-height: 100px;"> 
+            <h1><a href="{% url 'rickmortyapp:character' id=character.id %}">{{character.name}} </a></h1>
+        </div>
+    </div>
+    {% endfor %}
+    {% endif %}
+    
+    {% if results_location != None %}
+    <h1 id='title'>Location search results</h1>
+    {% for location in results_location %}
+    <div class="listing">
+        <h1><a href="{% url 'rickmortyapp:location' id=location.id %}">{{location.name}} </a></h1>
+    </div>
+    {% endfor %}
+    {% endif %}
+
+    
+    
+    {% if results_episode != None %}
+    <h1 id='title'>Episode search results</h1>
+    {% for episode in results_episode %}
+    <div class="listing">
+        <h1><a href="{% url 'rickmortyapp:episode' id=episode.id %}">{{episode.name}} </a></h1>
+    </div>
+    {% endfor %}
+    {% endif %}
+
+    {% if results_character == None %}
+    <h1 id='title'>No Character results</h1>
+    {% endif %}
+    {% if results_location == None %}
+    <h1 id='title'>No Location results</h1>
+    {% endif %}
+    {% if results_episode == None %}
+    <h1 id='title'>No Episode results</h1>
+    {% endif %}
+</div>
+
+{% endblock %}

@@ -1,0 +1,21 @@
+{% extends 'base/base.html' %}
+{% block content %}
+<div class="container2">
+    <div style="display: flex; flex-direction: indent-block;">
+        <h1 id="title2">{{name}}</h1>
+        <div>
+            <h2 id="sub-title2">Type: {{type}}</h2> 
+            <h2 id="sub-title2">Dimension: {{dimension}}</h2> 
+        </div>
+    </div>
+    <h1 id="sub-title">Residents: </h2>
+    {% for iid, iname, image in characters_info %}
+    <div class="listing">    
+        <div style="display: flex; flex-direction: row;">
+            <img src="{{image}}" style="border-radius: 50%; max-width: 100px; max-height: 100px;"> 
+            <h2><a href="{% url 'rickmortyapp:character' id=iid %}"> {{iname}}</a></h2>
+        </div>
+    </div>
+    {% endfor %}
+</div>
+{% endblock%}

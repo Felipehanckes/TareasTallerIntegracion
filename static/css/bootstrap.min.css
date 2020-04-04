@@ -1,0 +1,116 @@
+.Navbar {
+    display: flex;
+    flex-direction: row;
+    align-content: center;
+    vertical-align: middle;
+    padding-left: 60%;
+    background-color: rgba(255, 255, 255, 0.01);
+}
+
+.search_btn {
+    height: 30px;
+    width: 50px;
+    place-content: 'search';
+}
+
+.BaseContainer {
+    background: url("../images/RickMortyHouse.jpg") 50% 0 no-repeat fixed;;
+}
+
+.container {
+    margin: auto;
+    max-width: 1000px;
+    background: rgba(255, 255, 255, 0.2);
+}
+
+.container2 {
+    margin: auto;
+    max-width: 1300px;
+    background: rgba(255, 255, 255, 0.2);
+}
+
+#char_info {
+    max-height: 300px;
+    background: rgba(255, 255, 255, 1);
+}
+
+#title {
+    padding-top: 50px;
+    padding-left: 100px;
+    align-self: center;
+    font-family: 'get_schwiftyregular';
+    font-size: 70px;
+    font-weight: normal;
+    font-style: normal;
+}
+
+#title2 {
+    padding-top: 50px;
+    padding-left: 100px;
+    align-self: center;
+    font-family: 'Lucida Sans', cursive;
+    font-size: 60px;
+    font-weight: normal;
+    font-style: normal;
+}
+
+#sub-title {
+    font-family: 'Lucida Sans', cursive;
+    padding-left: 100px;
+    padding-top: 25px;
+    font-size: 40px;
+}
+
+#sub-title2 {
+    font-family: 'Lucida Sans', cursive;
+    padding-left: 50px;
+    padding-top: 25px;
+    font-size: 40px;
+}
+
+.listing{
+    font-family: 'Lucida Sans', cursive;
+    display: flex; 
+    flex-direction: row; 
+    align-items: stretch;
+    margin-left: 10%;
+    font-size: 25px;
+}
+
+.listing #head {
+    width: 400px;
+    padding-left: 40px;
+}
+
+.listing #body {
+    width: 400px;
+    padding-left: 40px;
+}
+
+a {
+    padding-left: 15px;
+    font-style: oblique;
+    text-decoration: none ;
+    text-decoration-color: black;
+    color: black;
+}
+
+.container table {
+    padding-top: 0;
+    background-color: snow;
+    margin-top: 0em;
+
+}
+@font-face {
+    font-family: 'get_schwiftyregular';
+    src: url('../fonts/get_schwifty-webfont.woff2') format('woff2'),
+         url('../fonts/get_schwifty-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+@font-face {   
+    font-family: 'Righteous';
+    src: url('../fonts/Righteous-Regular.ttf') format('ttf');
+    font-weight: normal;
+    font-style: normal;
+}
