@@ -14,7 +14,7 @@
 }
 
 .BaseContainer {
-    background: url("../images/RickMortyHouse.jpg") 50% 0 no-repeat fixed;;
+    background: url("../images/RickMortyHouse.jpg") 50% 0 no-repeat fixed;
 }
 
 .container {
@@ -42,6 +42,7 @@
     font-size: 70px;
     font-weight: normal;
     font-style: normal;
+    color: rgb(0, 183, 255);
 }
 
 #title2 {
@@ -89,10 +90,18 @@
 
 a {
     padding-left: 15px;
-    font-style: oblique;
+    font-style: cursive;
     text-decoration: none ;
-    text-decoration-color: black;
-    color: black;
+    color: rgb(0, 0, 0);
+
+}
+
+h6 a {
+    color: whitesmoke;
+}
+
+a:hover {
+    color: rgb(0, 183, 255);
 }
 
 .container table {
